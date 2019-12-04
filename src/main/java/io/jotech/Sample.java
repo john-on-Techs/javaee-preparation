@@ -8,4 +8,9 @@ public class Sample {
         }
         return sum;
     }
+
+    public double doDivide(double numerator, double denominator) {
+        if (denominator==0)throw new ArithmeticException();
+        return numerator/denominator;
+    }
 }
