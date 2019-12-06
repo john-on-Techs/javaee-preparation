@@ -284,3 +284,4 @@ testem.log
 # System Files
 
 Thumbs.db
+wildfly-server

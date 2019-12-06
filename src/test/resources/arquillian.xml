@@ -5,7 +5,7 @@
     <!-- Configuration to be used when the WildFly managed profile is active -->
     <container qualifier="jboss" default="true">
         <configuration>
-            <property name="jbossHome">target/wildfly-18.0.1.Final</property>
+            <property name="jbossHome">wildfly-server/wildfly-18.0.1.Final</property>
         </configuration>
     </container>
 </arquillian>

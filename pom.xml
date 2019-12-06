@@ -214,7 +214,7 @@
                                             <version>${version.wildfly}</version>
                                             <type>zip</type>
                                             <overWrite>false</overWrite>
-                                            <outputDirectory>target</outputDirectory>
+                                            <outputDirectory>wildfly-server</outputDirectory>
                                         </artifactItem>
                                     </artifactItems>
                                 </configuration>
@@ -236,8 +236,8 @@
                                     <systemPropertyVariables>
                                         <arquillian.launch>wildfly-managed</arquillian.launch>
                                         <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
-                                        <jboss.home>${project.basedir}/target/wildfly-18.0.1.Final</jboss.home>
-                                        <module.path>${project.basedir}/target/wildfly-18.0.1.Final/modules</module.path>
+                                        <jboss.home>${project.basedir}/wildfly-server/wildfly-18.0.1.Final</jboss.home>
+                                        <module.path>${project.basedir}/wildfly-server/wildfly-18.0.1.Final/modules</module.path>
                                     </systemPropertyVariables>
                                     <redirectTestOutputToFile>false</redirectTestOutputToFile>
                                 </configuration>
