@@ -29,7 +29,7 @@ public class LoginBeanTest {
     @Test
     public void login() {
         String loginResponse = loginBean.login("John");
-        Assert.assertEquals("Hello, John", loginResponse);
+        Assert.assertEquals("Hello, Johns", loginResponse);
 
     }
 
