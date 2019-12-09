@@ -12,13 +12,9 @@ jobs:
     - name: Set up JDK 1.8
       uses: actions/setup-java@v1
       with:
-        java-version: 1.8
-    - name: Build and Test With Maven
-      run: mvn -B clean install test --file pom.xml  
-    - name: Package with Maven
-      run: mvn -B  package  --file pom.xml
-    - name: ls target directory
-      run: ls target/   
+        java-version: 1.8  
+    - name: Build With Maven
+      run: mvn -B  package  --file pom.xml    
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
       with:
