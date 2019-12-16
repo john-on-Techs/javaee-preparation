@@ -1,1 +1,1 @@
-# java-ee-8-template
+# javaee-preparation

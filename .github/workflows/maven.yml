@@ -19,7 +19,7 @@ jobs:
       uses: actions/upload-artifact@v1.0.0
       with:
         # Artifact name
-        name: java-ee-template.war
+        name: javaee-preparation.war
          #Directory containing files to upload
         path: target/
     

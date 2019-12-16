@@ -5,17 +5,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.jotech</groupId>
-    <artifactId>java-ee-template</artifactId>
+    <artifactId>javaee-preparation</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>java-ee-template Maven Webapp</name>
+    <name>javaee-preparation Maven Webapp</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
+        <maveee-templaten.compiler.source>1.8</maveee-templaten.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <junit-jupiter.version>5.5.2</junit-jupiter.version>
         <version.wildfly>18.0.1.Final</version.wildfly>
@@ -116,6 +116,10 @@
                 <plugin>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.8.0</version>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
                 </plugin>
                 <plugin>
                     <artifactId>maven-surefire-plugin</artifactId>
@@ -126,6 +130,7 @@
                     <version>3.2.2</version>
                     <configuration>
                         <failOnMissingWebXml>false</failOnMissingWebXml>
+                        <packagingExcludes>target/wildfly-server/</packagingExcludes>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -214,7 +219,7 @@
                                             <version>${version.wildfly}</version>
                                             <type>zip</type>
                                             <overWrite>false</overWrite>
-                                            <outputDirectory>wildfly-server</outputDirectory>
+                                            <outputDirectory>target/wildfly-server</outputDirectory>
                                         </artifactItem>
                                     </artifactItems>
                                 </configuration>
@@ -236,8 +241,8 @@
                                     <systemPropertyVariables>
                                         <arquillian.launch>wildfly-managed</arquillian.launch>
                                         <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
-                                        <jboss.home>${project.basedir}/wildfly-server/wildfly-18.0.1.Final</jboss.home>
-                                        <module.path>${project.basedir}/wildfly-server/wildfly-18.0.1.Final/modules</module.path>
+                                        <jboss.home>${project.basedir}/target/wildfly-server/wildfly-18.0.1.Final</jboss.home>
+                                        <module.path>${project.basedir}/target/wildfly-server/wildfly-18.0.1.Final/modules</module.path>
                                     </systemPropertyVariables>
                                     <redirectTestOutputToFile>false</redirectTestOutputToFile>
                                 </configuration>
