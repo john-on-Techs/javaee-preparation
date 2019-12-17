@@ -134,7 +134,7 @@
                     <version>3.2.2</version>
                     <configuration>
                         <failOnMissingWebXml>false</failOnMissingWebXml>
-                        <packagingExcludes>target/wildfly-server/*</packagingExcludes>
+                        <packagingExcludes>WEB-INF/wildfly-server/</packagingExcludes>
                     </configuration>
                 </plugin>
                 <plugin>
